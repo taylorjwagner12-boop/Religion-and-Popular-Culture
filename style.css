@@ -96,6 +96,11 @@ body {
     overflow: hidden;
 }
 
+.hero-enhanced {
+    padding: 8rem 0 6rem 0;
+    background: linear-gradient(135deg, #5a67d8 0%, #6b4ba0 100%);
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -103,7 +108,7 @@ body {
     right: -10%;
     width: 500px;
     height: 500px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
 }
@@ -115,7 +120,7 @@ body {
     left: -5%;
     width: 400px;
     height: 400px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.06);
     border-radius: 50%;
     animation: float 8s ease-in-out infinite reverse;
 }
@@ -136,14 +141,33 @@ body {
     font-weight: 800;
     letter-spacing: -1px;
     animation: slideInDown 0.8s ease;
+    line-height: 1.2;
 }
 
 .hero p {
     font-size: 1.3rem;
     max-width: 700px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
     opacity: 0.95;
     animation: slideInUp 0.8s ease 0.2s both;
+    font-weight: 500;
+}
+
+.thesis-line {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #fff;
+    border-radius: 8px;
+    max-width: 600px;
+    animation: slideInUp 0.8s ease 0.4s both;
+}
+
+.thesis-line p {
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
+    font-weight: 600;
 }
 
 @keyframes slideInDown {
@@ -181,6 +205,7 @@ body {
     cursor: pointer;
     border: none;
     font-size: 1rem;
+    margin-top: 1rem;
 }
 
 .cta-button:hover {
@@ -272,6 +297,17 @@ li strong {
     color: #667eea;
 }
 
+/* ===== INTRO SECTION ===== */
+.intro-refined {
+    background: linear-gradient(to bottom, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+}
+
+.intro-refined p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #444;
+}
+
 /* ===== CARDS ===== */
 .cards {
     display: grid;
@@ -288,6 +324,12 @@ li strong {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
 }
 
 .card::before {
@@ -329,65 +371,65 @@ li strong {
     font-size: 1rem;
 }
 
-/* ===== INTRO SECTION ===== */
-.intro {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white !important;
-}
-
-.intro h2 {
-    color: white;
-}
-
-.intro h2::after {
-    background: white;
-}
-
-.intro p {
-    color: rgba(255, 255, 255, 0.95) !important;
-    font-size: 1.1rem;
-}
-
-/* ===== OVERVIEW SECTION ===== */
-.overview {
+/* ===== THEMES SECTION ===== */
+.themes-section {
     background: linear-gradient(to bottom, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
 }
 
-/* ===== CTA SECTION ===== */
-.cta {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white !important;
-    text-align: center;
+/* ===== FEATURED CONTENT ===== */
+.featured-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.cta h2 {
-    color: white;
-}
-
-.cta h2::after {
+.featured-card {
     background: white;
-}
-
-.cta p {
-    color: rgba(255, 255, 255, 0.95) !important;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-    color: white;
-    text-align: center;
     padding: 2.5rem;
-    margin-top: 3rem;
-    border-top: 3px solid #667eea;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    border-top: 4px solid #667eea;
 }
 
-footer p {
-    margin: 0;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 500;
+.featured-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.featured-card h3 {
+    color: #667eea;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.featured-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.card-link {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.card-link:hover {
+    color: #764ba2;
+    transform: translateX(5px);
+}
+
+.featured-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+    border-top-color: #764ba2;
 }
 
 /* ===== AUTHOR SECTION ===== */
@@ -447,6 +489,68 @@ footer p {
     box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
 }
 
+/* ===== CONCLUSION SECTION ===== */
+.conclusion-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    text-align: center;
+}
+
+.conclusion-section h2 {
+    color: white;
+}
+
+.conclusion-section h2::after {
+    background: white;
+}
+
+.conclusion-section p {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1.1rem;
+}
+
+.conclusion-section strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* ===== CTA FINAL SECTION ===== */
+.cta-final {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    text-align: center;
+}
+
+.cta-final h2 {
+    color: white;
+}
+
+.cta-final h2::after {
+    background: white;
+}
+
+.cta-final p {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 3rem;
+    border-top: 3px solid #667eea;
+}
+
+footer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .nav-links {
@@ -461,6 +565,14 @@ footer p {
     .hero p {
         font-size: 1rem;
     }
+
+    .thesis-line {
+        padding: 1rem;
+    }
+
+    .thesis-line p {
+        font-size: 1rem;
+    }
     
     h2 {
         font-size: 1.8rem;
@@ -471,6 +583,10 @@ footer p {
     }
     
     .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-cards {
         grid-template-columns: 1fr;
     }
     
@@ -501,8 +617,17 @@ footer p {
     .hero p {
         font-size: 0.95rem;
     }
+
+    .thesis-line p {
+        font-size: 0.9rem;
+    }
     
     h2 {
         font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
     }
 }
