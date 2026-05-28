@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Religion in Music & Artists - Religion in Popular Culture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">🙏 Religion & Culture</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">📽️ Films</a></li>
+                <li><a href="music.html">🎵 Music</a></li>
+                <li><a href="analysis.html">🔍 Analysis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Religion in Music & Artists</h1>
+            <p>How musicians and celebrities explore spirituality, morality, and faith</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>🎵 Music as Spiritual Expression</h2>
+            <p>
+                Music has always been intertwined with religion and spirituality. From gospel hymns to contemporary pop, 
+                artists use their platforms to explore faith, doubt, morality, and the human search for meaning.
+            </p>
+        </section>
+
+        <section>
+            <h2>Religious Themes in Contemporary Music</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Gospel & Spirituality</h3>
+                    <p>Direct expressions of faith, celebrating religious traditions and spiritual experiences through music.</p>
+                </div>
+                <div class="card">
+                    <h3>Doubt & Questioning</h3>
+                    <p>Artists who explore religious skepticism, personal faith struggles, and existential questions in their lyrics.</p>
+                </div>
+                <div class="card">
+                    <h3>Moral & Social Justice</h3>
+                    <p>Music addressing ethical concerns, compassion, and social responsibility rooted in religious values.</p>
+                </div>
+                <div class="card">
+                    <h3>Sacred Imagery</h3>
+                    <p>Use of religious symbolism, mysticism, and spiritual imagery in album art, performances, and music videos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Celebrity Spirituality & Public Personas</h2>
+            <p>
+                Many celebrities openly discuss their spiritual beliefs or question religion publicly, influencing how their audiences 
+                engage with faith. Some examples include:
+            </p>
+            <ul>
+                <li>Artists who credit faith as central to their creativity and purpose</li>
+                <li>Public figures who question religious institutions while maintaining spiritual curiosity</li>
+                <li>Celebrities who use their platform to promote religious or spiritual causes</li>
+                <li>Performers whose entire artistic identity is wrapped in religious or spiritual themes</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Religion & Music Intersect</h2>
+            <p>
+                Music's power lies in its ability to express what words alone cannot. It reaches people emotionally and spiritually. 
+                Because religion addresses fundamental human questions about meaning, purpose, love, suffering, and transcendence, 
+                it's a natural subject for musical exploration. Through music, artists and audiences explore their innermost beliefs 
+                and doubts in ways that feel both personal and universal.
+            </p>
+        </section>
+
+        <section class="cta">
+            <h2>Explore More</h2>
+            <p>Check out religion in film and critical analysis</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="movies.html" class="cta-button">Explore Films</a>
+                <a href="analysis.html" class="cta-button">Read Analysis</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🎓 © 2026 Religion in Popular Culture | Final Project | Made with ❤️</p>
+    </footer>
+
+    <script>
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
