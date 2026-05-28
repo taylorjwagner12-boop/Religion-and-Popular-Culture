@@ -9,12 +9,12 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <h1 class="logo">Religion & Popular Culture</h1>
+            <h1 class="logo">🙏 Religion & Culture</h1>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="music.html">Music & Artists</a></li>
-                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="movies.html">📽️ Films</a></li>
+                <li><a href="music.html">🎵 Music</a></li>
+                <li><a href="analysis.html">🔍 Analysis</a></li>
             </ul>
         </div>
     </nav>
@@ -33,7 +33,7 @@
                 The presence of religion in popular culture isn't accidental—it reflects fundamental human needs and societal values. 
                 By examining how religion appears in films, music, and celebrity culture, we gain insights into:
             </p>
-            <ul style="margin: 1rem 0 1rem 2rem;">
+            <ul>
                 <li><strong>Social Values:</strong> What do we collectively celebrate or question about faith and meaning?</li>
                 <li><strong>Moral Frameworks:</strong> How does popular culture shape ethical understanding and decision-making?</li>
                 <li><strong>Identity & Belonging:</strong> How do audiences use religious narratives to understand themselves and community?</li>
@@ -88,10 +88,44 @@
                 eternal human questions that drive us to create and consume stories.
             </p>
         </section>
+
+        <section class="cta">
+            <h2>Back to Explore</h2>
+            <p>Return to other sections of the project</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="cta-button">Back to Home</a>
+                <a href="movies.html" class="cta-button">Explore Films</a>
+                <a href="music.html" class="cta-button">Explore Music</a>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Religion in Popular Culture | Final Project</p>
+        <p>🎓 © 2026 Religion in Popular Culture | Final Project | Made with ❤️</p>
     </footer>
+
+    <script>
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
