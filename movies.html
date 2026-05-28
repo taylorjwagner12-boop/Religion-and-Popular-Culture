@@ -9,12 +9,12 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <h1 class="logo">Religion & Popular Culture</h1>
+            <h1 class="logo">🙏 Religion & Culture</h1>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="music.html">Music & Artists</a></li>
-                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="movies.html">📽️ Films</a></li>
+                <li><a href="music.html">🎵 Music</a></li>
+                <li><a href="analysis.html">🔍 Analysis</a></li>
             </ul>
         </div>
     </nav>
@@ -35,7 +35,7 @@
             </p>
             
             <h3>Key Religious Themes</h3>
-            <ul style="margin: 1rem 0 1rem 2rem;">
+            <ul>
                 <li><strong>The Messianic Figure:</strong> Robert Neville (Will Smith) emerges as a Christ-like figure, the lone survivor with the power to save humanity.</li>
                 <li><strong>Sacrifice and Redemption:</strong> The film culminates in Neville's self-sacrificial act, reminiscent of Christ's crucifixion, to save the rest of humanity.</li>
                 <li><strong>Faith vs. Science:</strong> The movie explores the tension between scientific rationalism and spiritual faith in addressing humanity's greatest crises.</li>
@@ -76,10 +76,43 @@
                 discussing what it means to be human.
             </p>
         </section>
+
+        <section class="cta">
+            <h2>Explore More</h2>
+            <p>Check out how religion appears in music and celebrity culture</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="music.html" class="cta-button">Explore Music</a>
+                <a href="analysis.html" class="cta-button">Read Analysis</a>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Religion in Popular Culture | Final Project</p>
+        <p>🎓 © 2026 Religion in Popular Culture | Final Project | Made with ❤️</p>
     </footer>
+
+    <script>
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
