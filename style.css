@@ -115,6 +115,15 @@ body {
     opacity: 0.5;
 }
 
+.hero-texture {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' seed='1'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+    opacity: 0.08;
+    pointer-events: none;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -151,21 +160,23 @@ body {
 
 .hero h1 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 800;
     letter-spacing: -1px;
     animation: slideInDown 0.8s ease;
     line-height: 1.2;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 750px;
+.hero-subtitle {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 720px;
     margin: 0 auto 1.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     opacity: 0.95;
     animation: slideInUp 0.8s ease 0.2s both;
-    font-weight: 500;
-    line-height: 1.7;
 }
 
 .thesis-line {
@@ -528,7 +539,7 @@ li strong {
     background: white;
 }
 
-.conclusion-section p {
+.conclusion-section > p {
     color: rgba(255, 255, 255, 0.95) !important;
     font-size: 1.05rem;
     line-height: 1.8;
@@ -541,21 +552,18 @@ li strong {
     border-radius: 12px;
     max-width: 600px;
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .key-questions p {
     font-size: 1.1rem;
-    margin: 1.2rem 0;
+    margin: 0;
     color: rgba(255, 255, 255, 0.98);
     line-height: 1.6;
-}
-
-.key-questions p:first-child {
-    margin-top: 0;
-}
-
-.key-questions p:last-child {
-    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
 }
 
 /* ===== CTA FINAL SECTION ===== */
@@ -606,8 +614,10 @@ footer p {
         font-size: 2.2rem;
     }
     
-    .hero p {
-        font-size: 1rem;
+    .hero-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 90%;
     }
 
     .thesis-line {
@@ -643,6 +653,10 @@ footer p {
         justify-content: center;
     }
 
+    .key-questions {
+        padding: 1.5rem;
+    }
+
     .key-questions p {
         font-size: 1rem;
     }
@@ -660,10 +674,12 @@ footer p {
     
     .hero h1 {
         font-size: 1.8rem;
+        margin-bottom: 1rem;
     }
     
-    .hero p {
-        font-size: 0.95rem;
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
     .thesis-line p {
@@ -685,6 +701,6 @@ footer p {
 
     .key-questions p {
         font-size: 0.95rem;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
     }
 }
