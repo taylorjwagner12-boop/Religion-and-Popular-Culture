@@ -726,3 +726,21 @@ footer p {
         margin: 0.5rem 0;
     }
 }
+
+
+.other-films-section {
+    margin-top: 5rem;
+}
+
+.movie-card-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .movie-card-row {
+        grid-template-columns: 1fr;
+    }
+}
