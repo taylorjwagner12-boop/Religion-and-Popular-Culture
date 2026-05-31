@@ -177,9 +177,38 @@
 
             </div>
 
-        </section>
+            <section>
 
-       <section>
+    <h2>Key Takeaways</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Science vs. Faith</h3>
+            <p>
+                The film shows how scientific explanations and religious interpretations can offer different ways of understanding the same events.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Symbols Matter</h3>
+            <p>
+                Butterflies, prayers, crosses, and abandoned holiday decorations communicate deeper religious meaning throughout the story.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Redemption Through Sacrifice</h3>
+            <p>
+                Neville's final act reflects one of the most common religious themes in storytelling: giving oneself up for the benefit of others.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
 
     <h2>Other Films That Explore Religious Themes</h2>
 
@@ -223,35 +252,3 @@
         <a href="analysis.html" class="cta-button">Read Analysis</a>
     </div>
 </section>
-
-    </main>
-
-    <footer>
-        <p>🎓 © 2026 Religion in Popular Culture | Final Project | Made with ❤️</p>
-    </footer>
-
-    <script>
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
-
-</body>
-</html>
